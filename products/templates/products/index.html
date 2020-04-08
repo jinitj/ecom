@@ -1,0 +1,107 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <title>Tinnu&Co.</title>
+  <link rel="stylesheet" href="{% static 'products/css/style.css' %}">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!--Changing the number in the column_# class changes the number of columns-->
+<body>
+
+	
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-2">
+          <h1 class="filter_drawer">hello</h1>
+        </div>
+      <div class="col-lg-10">
+        <div id="wrap">
+        <div id="columns" class="columns_4">
+        {% for product in products%}
+          <figure>
+          <a href="{{ product.id }}"><img src="{{ product.photo.url }}" ></a>
+          <figcaption>{{product.name}}</figcaption>
+            <span class="price" style="padding-left: 14px;">Rs. {{product.price}}</span>
+            <a class="button" style="color:#ffffff" onclick="console.log('ello')">Add to cart</a>
+          </figure>
+        
+        {% endfor %}
+      </div>
+      </div>
+
+	<!--
+	<figure>
+	<img src="{% static 'products/img/img1.jpg' %}">
+	<figcaption>Green and Black Flowers</figcaption>
+    <span class="price">$44</span>
+    <a class="button" href="#">Book Now</a>
+	</figure>
+	
+  <figure>
+	<img src="{% static 'products/img/img1.jpg' %}">
+	<figcaption>Black Dots</figcaption>
+    <span class="price">$44</span>
+    <a class="button" href="#">Book Now</a>
+	</figure>
+  
+	<figure>
+	<img src="{% static 'products/img/img1.jpg' %}">
+	<figcaption>Red Flowy</figcaption>
+    <span class="price">$44</span>
+    <a class="button" href="#">Book Now</a>
+	</figure>
+	
+   <figure>
+	 <img src="{% static 'products/img/img1.jpg' %}">
+	<figcaption>Yellow Button-Up</figcaption>
+    <span class="price">$44</span>
+    <a class="button" href="#">Book Now</a>
+	</figure>
+	
+   <figure>
+	 <img src="{% static 'products/img/img1.jpg' %}">
+	<figcaption>Put a Bird On It</figcaption>
+     <span class="price">$44</span>
+     <a class="button" href="#">Book Now</a>
+	</figure>
+  
+	<figure>
+	<img src="{% static 'products/img/img1.jpg' %}">
+	<figcaption>Polka Dots</figcaption>
+    <span class="price">$44</span>
+    <a class="button" href="#" >Book Now</a>
+	</figure>	
+  
+   <figure>
+	<img src="{% static 'products/img/img1.jpg' %}">
+	<figcaption>Blue Spots</figcaption>
+     <span class="price">$44</span>
+     <a class="button" href="#">Book Now</a>
+	</figure>
+  
+    <figure>
+	<img src="{% static 'products/img/img1.jpg' %}">
+    <figcaption>Pink Dots</figcaption>
+      <span class="price">$44</span>
+      <a class="button" href="#">Book Now</a>
+  </figure>	
+  
+  <figure>
+    <img src="{% static 'products/img/img1.jpg' %}">
+      <figcaption>Pink Dots</figcaption>
+        <span class="price">$44</span>
+        <a class="button" href="#">Book Now</a>
+    </figure>	
+    --->
+      </div>
+    </div>
+</body>
+<!-- partial -->
+  
+</body>
+</html>
